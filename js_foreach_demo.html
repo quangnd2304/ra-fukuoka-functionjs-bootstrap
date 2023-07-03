@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp foreach</title>
+</head>
+
+<body>
+    <script>
+        let arrStudent = [
+            { "studentId": "SV001", "studentName": "Nguyễn Văn A", "age": 20 },
+            { "studentId": "SV002", "studentName": "Nguyễn Văn B", "age": 18 },
+            { "studentId": "SV003", "studentName": "Nguyễn Văn C", "age": 22 }
+        ]
+        // Duyệt các phần tử (đối tượng sinh viên) trong mảng bằng vòng lặp foreach
+        let arrReturn = [];
+        arrStudent.forEach((student, index) => {
+            // callback function để xử lý trong từng vòng lặp
+            console.group();
+            console.log("Vòng lặp thứ " + (index + 1));
+            console.log("Đối tượng sinh viên đang duyệt--->", student);
+            console.log("Chỉ số phần tử đang duyệt--->", index);
+            console.groupEnd();
+            arrReturn.push(student);
+            // Vòng lặp foreach chỉ duyệt các phần tử mà không thể return ra giá trị
+            // return student;
+        })
+        console.log("Mảng trả về-->", arrReturn);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lọc dữ liệu với filter</title>
+</head>
+
+<body>
+    <script>
+        let arrStudent = [
+            { "studentId": "SV001", "studentName": "Nguyễn Văn A", "age": 20 },
+            { "studentId": "SV002", "studentName": "Nguyễn Văn B", "age": 18 },
+            { "studentId": "SV003", "studentName": "Nguyễn Văn C", "age": 22 }
+        ]
+        // Duyệt mảng arrStudent và lọc các dữ liệu ra 1 mảng mới gồm các sinh viên có tuổi lớn hoặc bằng 20
+        // let arrReturn = arrStudent.filter((student, index) => {
+        //     // callback function dùng để lọc dữ liệu
+        //     if (student.age >= 20) {
+        //         return student;
+        //     }
+        // })
+        let arrReturn = arrStudent.filter(student => student.age >= 20);
+        console.log("Mảng mới trả ra là--->", arrReturn);
+
+    </script>
+</body>
+
+</html>

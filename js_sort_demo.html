@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sắp xếp với hàm sort</title>
+</head>
+
+<body>
+    <script>
+        let arrStudent = [
+            { "studentId": "SV001", "studentName": "Nguyễn Văn B", "age": 20 },
+            { "studentId": "SV002", "studentName": "Nguyễn Văn A", "age": 18 },
+            { "studentId": "SV003", "studentName": "Nguyễn Văn C", "age": 22 }
+        ]
+        // Sắp xếp mảng theo tuổi tăng dần
+        // So sánh phần tử student1 và student2 theo tiêu chí sắp xếp
+        // Tăng dần: Khi so sánh nếu st1>st2 -> giá trị dương, st1<st2--> giá trị âm, st1==st2-->0
+        // Giảm dần: khi so sánh nếu st1>st2 --> giá trị âm, st1<st2 --> giá trị dương, st1==st2-->0
+        // arrStudent.sort((student1, student2) => student2.age - student1.age);
+        // Sắp xếp mảng tăng dần theo tên sinh viên
+        // arrStudent.sort((student1, student2) => (student1.studentName > student2.studentName) ? 1 : (student1.studentName < student2.studentName) ? -1 : 0)
+        // Sắp xếp mảng giảm dần theo tên sinh viên
+        arrStudent.sort((student1, student2) => (student1.studentName > student2.studentName) ? -1 : (student1.studentName < student2.studentName) ? 1 : 0);
+
+        console.log("Mảng sau khi sắp xếp -->", arrStudent);
+    </script>
+</body>
+
+</html>

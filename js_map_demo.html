@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vòng lặp map</title>
+</head>
+
+<body>
+    <script>
+        // Duyệt các phần tử của mảng và trả về 1 mảng có cùng kích thước với mảng duyệt
+        let arrStudent = [
+            { "studentId": "SV001", "studentName": "Nguyễn Văn A", "age": 20 },
+            { "studentId": "SV002", "studentName": "Nguyễn Văn B", "age": 18 },
+            { "studentId": "SV003", "studentName": "Nguyễn Văn C", "age": 22 }
+        ]
+        // Duyệt các phần tử của mảng arrStudent và trả ra một mảng gồm các phần tử của mảng arrStudnet
+        let arrReturn = arrStudent.map((student, index) => {
+            // callback function để xử lý trong từng vòng lặp
+            console.group();
+            console.log("Vòng lặp thứ " + (index + 1));
+            console.log("Đối tượng sinh viên đang duyệt--->", student);
+            console.log("Chỉ số phần tử đang duyệt--->", index);
+            console.groupEnd();
+            // Mỗi vòng lặp phải trả ra 1 giá trị
+            return student;
+        })
+        console.log("Mảng return nhận được--->", arrReturn);
+        // Sử dụng hàm map để lọc dữ liệu
+        let arrFilter = arrStudent.map(student => {
+            if (student.age >= 20) {
+                return student;
+            }
+        })
+        console.log("Mảng sau khi lọc với map--->", arrFilter);
+    </script>
+</body>
+
+</html>
